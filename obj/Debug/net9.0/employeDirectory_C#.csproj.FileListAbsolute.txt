@@ -1,0 +1,15 @@
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\bin\Debug\net9.0\employeDirectory_C#.exe
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\bin\Debug\net9.0\employeDirectory_C#.deps.json
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\bin\Debug\net9.0\employeDirectory_C#.runtimeconfig.json
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\bin\Debug\net9.0\employeDirectory_C#.dll
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\bin\Debug\net9.0\employeDirectory_C#.pdb
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.AssemblyInfoInputs.cache
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.AssemblyInfo.cs
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.csproj.CoreCompileInputs.cache
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.sourcelink.json
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.dll
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\refint\employeDirectory_C#.dll
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.pdb
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\employeDirectory_C#.genruntimeconfig.cache
+C:\Users\USER\OneDrive\Documents\byu\CSE310\employeDirectory_C#\obj\Debug\net9.0\ref\employeDirectory_C#.dll
