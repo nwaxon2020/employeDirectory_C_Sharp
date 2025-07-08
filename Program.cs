@@ -7,9 +7,6 @@ using SetEmployee;
 HelloWorld helloWorld = new();
 Functions functions = new();
 
-//List of employees
-List<Employee> employees = new();
-
 //bool to exit program when true
 bool exit = true;
 
@@ -32,12 +29,7 @@ while (exit != false)
     switch (Console.ReadLine())
     {
         case "1":
-            employees.Add(functions.AddEmployee());
-            Console.WriteLine("Please wait...!");
-            Thread.Sleep(3000); //3 sec delay to allow program run smoothly
-            Console.WriteLine("\n--Employee Added sucessfully--");
-            functions.DisplayAddedEmploye();
-            Thread.Sleep(5000); // 5 sec delay to allow user see success message 
+            functions.AddEmployee();
             break;
         case "2":
             functions.EditEmployee();

@@ -13,7 +13,7 @@ namespace Function
         List<Employee> employee = new();
 
         //Add employee method/function
-        public Employee AddEmployee()
+        public void AddEmployee()
         {
             //get ID
             Console.Write("Enter Employee ID: ");
@@ -38,12 +38,19 @@ namespace Function
             double salary = double.Parse(Console.ReadLine() ?? "0.00");
 
 
-            //return object so it can be added to the employee list
-            return new Employee(id, name, department, phoneNumber, salary);
+            //Add employee to the list
+            employee.Add(new Employee(id, name, department, phoneNumber, salary)); 
+            Console.WriteLine("Please wait...!");
+            Thread.Sleep(3000); //3 sec delay to allow program run smoothly
+            Console.WriteLine("\n--Employee Added sucessfully--");
+
+            //display a few details of the added employee such as Name and Phone number
+            DisplayAddedEmploye();
+            Thread.Sleep(5000); // 5 sec delay to allow user see success message 
 
         }
 
-        //diplay name and phone number of the employee added
+        //Method/function to display name and phone number of the employee added
         public void DisplayAddedEmploye()
         {
             Console.WriteLine($"Name: {Name}\nPhone_Number: {PhoneNumber}");
@@ -76,6 +83,7 @@ namespace Function
             int id = int.Parse(Console.ReadLine() ?? "0");
 
             var emp = employee.FirstOrDefault(e => e.Id == id);
+           
             if (emp == null)
             {
                 Console.WriteLine("\nPlease wait.....");
@@ -94,7 +102,12 @@ namespace Function
                 emp.PhoneNumber = Console.ReadLine() ?? emp.PhoneNumber;
 
                 Console.Write("Enter Employee's Salary: ");
-                emp.Salary = double.Parse(Console.ReadLine() ?? $"{emp.Salary}");
+                emp.Salary = double.Parse(Console.ReadLine() ?? $"{ emp.Salary}");
+
+                //Pass a message of success
+                Console.WriteLine("Please wait...!");
+                Thread.Sleep(3000); //3 sec delay to allow program run smoothly
+                Console.WriteLine($"\n--Employee ({emp.Name}) Updated sucessfully--");
             }
         }
 
