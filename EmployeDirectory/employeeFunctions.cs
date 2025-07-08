@@ -1,7 +1,6 @@
-using System.Runtime.CompilerServices;
-using System.Runtime.ConstrainedExecution;
-using SetEmployee;
 
+using SetEmployee;
+// Name space to avoid conflict of class
 namespace Function
 {
     //function class to hold diffrent functions
@@ -56,8 +55,10 @@ namespace Function
             Console.WriteLine($"Name: {Name}\nPhone_Number: {PhoneNumber}");
         }
 
+        // View Employee Method/ function
         public void ViewEmployee()
         {
+            //Check if employee exists
             if (employee.Count == 0)
             {
                 Console.WriteLine("\nPlease wait.....");
@@ -67,23 +68,27 @@ namespace Function
             }
             else
             {
+                //Show a list of all employees found
                 Console.WriteLine("\nPlease wait.....");
                 Thread.Sleep(3000);
                 foreach (var item in employee)
                 {
-                    item.DisplayEmployee();
+                    item.DisplayEmployee(); //this is what displays all the employess
                     Console.WriteLine("--------------------------------------");
                 }
             }
         }
 
+        // EDIT THE EMPLOYEE BY ID
         public void EditEmployee()
         {
             Console.Write("Enter Employee's ID: ");
             int id = int.Parse(Console.ReadLine() ?? "0");
 
+            //Get the first Matching value
             var emp = employee.FirstOrDefault(e => e.Id == id);
-           
+
+            //if no employee do show "Employee not found"
             if (emp == null)
             {
                 Console.WriteLine("\nPlease wait.....");
@@ -92,6 +97,7 @@ namespace Function
             }
             else
             {
+                //edit the employe details
                 Console.Write("Enter Employee's Name: ");
                 emp.Name = Console.ReadLine() ?? emp.Name;
 
@@ -102,9 +108,9 @@ namespace Function
                 emp.PhoneNumber = Console.ReadLine() ?? emp.PhoneNumber;
 
                 Console.Write("Enter Employee's Salary: ");
-                emp.Salary = double.Parse(Console.ReadLine() ?? $"{ emp.Salary}");
+                emp.Salary = double.Parse(Console.ReadLine() ?? $"{emp.Salary}");
 
-                //Pass a message of success
+                //Show a message of success of edited employee
                 Console.WriteLine("Please wait...!");
                 Thread.Sleep(3000); //3 sec delay to allow program run smoothly
                 Console.WriteLine($"\n--Employee ({emp.Name}) Updated sucessfully--");

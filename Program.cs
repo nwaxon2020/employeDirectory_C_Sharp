@@ -1,7 +1,6 @@
 ﻿// calling the instance of the great created in the HelloWorld folder
 using Greet;
 using Function;
-using SetEmployee;
 
 //create a new object of types 
 HelloWorld helloWorld = new();
@@ -29,19 +28,18 @@ while (exit != false)
     switch (Console.ReadLine())
     {
         case "1":
-            functions.AddEmployee();
+            functions.AddEmployee(); // method to add employee 
             break;
         case "2":
-            functions.EditEmployee();
+            functions.EditEmployee(); // method to Edit employee 
             break;
 
         case "3":
-            functions.ViewEmployee();
+            functions.ViewEmployee(); // method to View employee 
             break;
 
-        case "4":
-            //exit change to true to exit program
-            exit = false;
+        case "4":      
+            exit = false; //exit change to true to exit program
             Console.WriteLine("\nThankyou and GoodBye...!");
             break;
 
