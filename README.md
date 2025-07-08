@@ -22,3 +22,20 @@
 {Make a list of websites that you found helpful in this project}
 * [Microsoft C# Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
 * [C# Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
+
+
+
+# Overview for Employee Program
+- Employee program is a simple app that deals with employees registery, the app add's a user, edit's a user and view the employee registry. It is created with C# language and it hae loops, methods/functions, classes, and variables.
+
+* [YouTube](https://youtu.be/Y-UrF4vFLtc)
+
+# Development Environment for Employee Program
+- I used Visual Studio Code or VS Code as my code editor because it's easier for understand the IDE and it supports C# development through the C# extension by Microsoft. I also used the .NET SDK and terminal commands to build and run the project with dotnet.
+
+- I wrote this program in C#, it's a modern, object-oriented programming language developed by Microsoft. It’s commonly used for web applications, desktop software, games, and more. 
+
+# Useful Websites
+{Make a list of websites that you found helpful in this project}
+* [Microsoft C# Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
+* [C# Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
