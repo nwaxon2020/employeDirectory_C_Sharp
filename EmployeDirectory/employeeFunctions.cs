@@ -11,6 +11,10 @@ namespace Function
 
         List<Employee> employee = new();
 
+        //file variable
+        private const string DataFilePath = "employees.data";
+
+
         //Add employee method/function
         public void AddEmployee()
         {
@@ -36,9 +40,23 @@ namespace Function
             Console.Write("Enter Employee Salary: ");
             double salary = double.Parse(Console.ReadLine() ?? "0.00");
 
+            // Address information
+            Console.Write("Enter Street: ");
+            string street = Console.ReadLine() ?? "No Street";
+
+            Console.Write("Enter City: ");
+            string city = Console.ReadLine() ?? "No City";
+
+            Console.Write("Enter State: ");
+            string state = Console.ReadLine() ?? "No State";
+
+            //pass in the street informations
+            Address address = new Address(street, city, state);
+
+
 
             //Add employee to the list
-            employee.Add(new Employee(id, name, department, phoneNumber, salary)); 
+            employee.Add(new Employee(id, name, department, phoneNumber, salary, address));
             Console.WriteLine("Please wait...!");
             Thread.Sleep(3000); //3 sec delay to allow program run smoothly
             Console.WriteLine("\n--Employee Added sucessfully--");
@@ -114,6 +132,64 @@ namespace Function
                 Console.WriteLine("Please wait...!");
                 Thread.Sleep(3000); //3 sec delay to allow program run smoothly
                 Console.WriteLine($"\n--Employee ({emp.Name}) Updated sucessfully--");
+            }
+        }
+
+        // Additional Requirement Save and Upload File--------------------------------------------------------------      
+        // Method to save employees to file
+        public void SaveEmployeesToFile()
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(DataFilePath))
+                {
+                    foreach (Employee emp in employee)
+                    {
+                        writer.WriteLine($"{emp.Id},{emp.Name},{emp.Department},{emp.PhoneNumber},{emp.Salary}," +
+                        $"{emp.EmployeeAddress.Street},{emp.EmployeeAddress.City}," +
+                        $"{emp.EmployeeAddress.State}");
+                    }
+                }
+                Console.WriteLine("Data saved successfully!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving data: {ex.Message}");
+            }
+        }
+
+        // Add this method to load employees from file
+        public void LoadEmployeesFromFile()
+        {
+            try
+            {
+                if (File.Exists(DataFilePath))
+                {
+                    employee.Clear(); // Clear existing data before loading
+                    string[] lines = File.ReadAllLines(DataFilePath);
+                    
+                    foreach (string line in lines)
+                    {
+                        string[] data = line.Split(',');
+                        if (data.Length >= 8)
+                        {
+                            Address address = new Address(data[5], data[6], data[7]);
+                            employee.Add(new Employee(
+                                int.Parse(data[0]),
+                                data[1],
+                                data[2],
+                                data[3],
+                                double.Parse(data[4]),
+                                address
+                            ));
+                        }
+                    }
+                    Console.WriteLine("Data loaded successfully!");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading data: {ex.Message}");
             }
         }
 

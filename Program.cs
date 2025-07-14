@@ -9,6 +9,9 @@ Functions functions = new();
 //bool to exit program when true
 bool exit = true;
 
+// Load existing data when program starts
+functions.LoadEmployeesFromFile();
+
 //call the method fom the class hello world
 helloWorld.SayHello();
 
@@ -20,7 +23,8 @@ while (exit != false)
     Console.WriteLine("1. Add Employee");
     Console.WriteLine("2. Edit Employee");
     Console.WriteLine("3. View All Employees");
-    Console.WriteLine("4. Exit");
+    Console.WriteLine("4. Save Data");  
+    Console.WriteLine("5. Exit"); 
 
     Console.Write("\nChoose an option: ");
 
@@ -38,8 +42,16 @@ while (exit != false)
             functions.ViewEmployee(); // method to View employee 
             break;
 
-        case "4":      
-            exit = false; //exit change to true to exit program
+        case "4":     
+            // Just save and continue program 
+            functions.SaveEmployeesToFile();
+            Thread.Sleep(3000);
+            break;
+
+        case "5":      
+            // Save before exiting incase user forgets to exit program
+            functions.SaveEmployeesToFile();
+            exit = false;
             Console.WriteLine("\nThankyou and GoodBye...!");
             break;
 
